@@ -1,0 +1,11 @@
+created: 20240523143204185
+list: 目录磁盘式展开 目录磁盘式展开文件 目录磁盘式动态调用
+modified: 20240523152705015
+tags: 教程向-Echarts插件简单使用
+title: 目录磁盘展开修改版
+type: text/vnd.tiddlywiki
+
+本修改版是在[[$:/plugins/Gk0Wk/echarts/addons/PluginsSize]]基础上修改而来的。原本的addon是为了展示插件的大小。而我在这里改成了展示子标签条目的内容。效果在[[目录磁盘式展开]]可以查看。修改后的addon在[[目录磁盘式展开文件]]中。使用修改版，需要同时安装林一二的[[$:/plugins/linonetwo/in-tagtree-of]]，因为需要通过这个插件来进行深入排查。
+
+
+<<tabs "[tag[目录磁盘展开修改版]]" "目录磁盘式展开" "$:/state/tab1-2" >>

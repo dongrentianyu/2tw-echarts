@@ -1,0 +1,11 @@
+created: 20240501115346018
+creator: 马不前
+modified: 20240523152647450
+modifier: 马不前
+tags: 目录磁盘展开修改版
+title: 目录磁盘式展开
+type: text/vnd.tiddlywiki
+
+<$echarts $tiddler="目录磁盘式展开文件" $height="500px" dblclick="(params, parentWidget) => { console.log(params); parentWidget.dispatchEvent({ type: 'tm-navigate', navigateTo: params.data.name }) }" />
+
+本条目使用了[[目录磁盘式展开文件]]，里面的筛选器是`[!is[system]tag[教程向-Echarts插件简单使用]sort[title]]`，并以此排查层级，最多可深入到十级。最开始的层级是以子条目数量为数值的，而之后的则是条目正文的字数为数值的。双击可跳转到对应条目。

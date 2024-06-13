@@ -1,0 +1,36 @@
+created: 20240523144901511
+modified: 20240523154034016
+tags: 目录磁盘展开修改版
+title: 目录磁盘式动态调用
+type: text/vnd.tiddlywiki
+
+如果我们需要动态调用这个目录磁盘的效果怎么办，如果每调用一次，都写一个像[[目录磁盘式展开文件]]里的代码，那肯定很麻烦，也很复杂，不好维护。所以我们需要一个动态的addon，来进行复杂的调用。那这个东西怎么搞呢？其实很简单，在之前的[[折线图-模板使用]]教程中就已经提到过了。
+
+```
+<$let 
+graphRootTiddler=<<currentTiddler>>
+>
+……
+</$let>
+```
+
+我们可以通过`let`进行变量赋值，比如上面就赋值了一个变量名为`graphRootTiddler`，其值为`<<currentTiddler>>`，而在下面省略中的代码中，则可以使用变量名`graphRootTiddler`，而根据代码，通常有两种方式。或者说我经常用这两种方式。一种方式是直接传递`<<currentTiddler>>`变量，即当前展示的那样。另一种则是用筛选器代替。前者相当于参数值默认是`[!is[system]tag<currentTiddler>sort[title]]`，而另一种要传递的参数则是特定的筛选器。
+
+我这里就直接引入了两个条目，分别是[[目录磁盘式展开模板调用-current-addon]]和[[目录磁盘式展开模板调用-filter-addon]]，两者调用方式不同。
+
+```
+<$echarts $tiddler="目录磁盘式展开模板调用-current-addon" currentTiddler="教程向-Echarts插件简单使用" $height="500px"/>
+
+<$echarts $tiddler="目录磁盘式展开模板调用-filter-addon" filter="[tag[教程向-Echarts插件简单使用]]" $height="500px"/>
+```
+
+前者传递的是单个条目名称，接入的筛选器就会是`[!is[system]tag[教程向-Echarts插件简单使用]sort[title]]`，而后者则是直接传入筛选器`[tag[教程向-Echarts插件简单使用]]`，两者筛选器实际内容上是一样的，只不过后者会更加灵活。
+
+<$echarts $tiddler="目录磁盘式展开模板调用-current-addon" currentTiddler="教程向-Echarts插件简单使用" $height="500px"/>
+
+<$echarts $tiddler="目录磁盘式展开模板调用-filter-addon" filter="[tag[教程向-Echarts插件简单使用]]" $height="500px"/>
+
+
+这里我使用一个复杂的筛选器传入来展示后者的灵活之处。
+
+<$echarts $tiddler="目录磁盘式展开模板调用-filter-addon" filter="[tag[ECharts]] [tag[堆叠图]]" $height="500px"/>

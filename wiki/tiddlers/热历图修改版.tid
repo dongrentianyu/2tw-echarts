@@ -1,0 +1,10 @@
+created: 20240523133700754
+modified: 20240523141957912
+tags: 教程向-Echarts插件简单使用
+title: 热历图修改版
+type: text/vnd.tiddlywiki
+
+热历图原版是把创建时间和修改时间都算进去了。用的筛选器是`[sameday:created[${date}]] [sameday:modified[${date}]]`，所以我修改了热历图，改成了两个版本的。分开计算。这里我是直接从编译后的代码里修改的，所以直接复制代码就可以了。
+
+<<tabs "[tag[热历图修改版]]" "热历图-创建时间版" "$:/state/tab1-1" >>
+
